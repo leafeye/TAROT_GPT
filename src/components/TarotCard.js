@@ -1,15 +1,27 @@
 // src/components/TarotCard.js
 
-import React from 'react';
+import React, { useState, useEffect }from 'react';
 
 const TarotCard = ({ card }) => {
+    const [randomDelay, setRandomDelay] = useState(Math.random() * 5);// Generate a random number between 0 and 5
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          setRandomDelay(Math.random() * 5);
+        }, 5000 + Math.random() * 10000); // Generate a random interval between 5s and 15s
+    
+        return () => {
+          clearInterval(interval);
+        };
+      }, []);
+
   return (
     <div className="tarot-card">
     <div className="tarot-card-image-container">
       <img src={card.image} alt={card.name} className="tarot-card-image" />
-      <div className="tarot-card-image-glitch" style={{ backgroundImage: `url(${card.image})` }}></div>
-      <div className="tarot-card-image-glitch" style={{ backgroundImage: `url(${card.image})` }}></div>
-      <div className="tarot-card-image-glitch" style={{ backgroundImage: `url(${card.image})` }}></div>
+      <div className="tarot-card-image-glitch" style={{ backgroundImage: `url(${card.image})`, '--random-delay': randomDelay }}></div>
+      <div className="tarot-card-image-glitch" style={{ backgroundImage: `url(${card.image})`, '--random-delay': randomDelay }}></div>
+      <div className="tarot-card-image-glitch" style={{ backgroundImage: `url(${card.image})`, '--random-delay': randomDelay }}></div>
 
     </div>
     <div className="tarot-card-name">{card.name}</div>
