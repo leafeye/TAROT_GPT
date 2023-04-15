@@ -1,5 +1,16 @@
 /* src/styles.css */
 
+@import url('https://fonts.googleapis.com/css2?family=VCR+OSD+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: #0bd6c5;   /* #1f2041; */
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+  }
+
 .layout {
     display: flex;
     flex-direction: column;
@@ -7,7 +18,10 @@
   }
   
   .header {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 2rem;
     margin: 2rem 0;
+    color: #f72585;
   }
   
   .main-content {
@@ -25,6 +39,9 @@
   }
   
   .tarot-card {
+    background-color: #4b3f72;
+    border: 1px solid #3a86ff;
+    box-shadow: 0 2px 5px rgba(58, 134, 255, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,10 +53,23 @@
     width: 100%;
   }
 
+  .tarot-card-name {
+    font-size: 1rem;
+    color: #e0e0e0;
+  }
+
   .generate-button {
+    background-color: #f72585;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
     margin-bottom: 2.5rem; /* Add this line */
+  }
+
+  .generate-button:hover {
+    background-color: #3a86ff;
   }
   
