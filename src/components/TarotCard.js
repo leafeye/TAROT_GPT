@@ -24,8 +24,9 @@ const TarotCard = ({ card }) => {
     };
   }, []);
 
+
   return (
-    <div className="tarot-card">
+    <div className={`tarot-card`}>
     <div className="tarot-card-image-container">
       <img src={card.image} alt={card.name} className="tarot-card-image" />
       <div className="tarot-card-image-glitch" style={{ backgroundImage: `url(${card.image})`, '--random-delay': randomDelay, animationDuration: glitchDuration, }}></div>
