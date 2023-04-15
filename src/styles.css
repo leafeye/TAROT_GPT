@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-    background-color: #0bd6c5;   /* #1f2041; */
+    background-color: #2a2d7c;   /* #1f2041; or  #0bd6c5;   */
     font-family: 'Roboto', sans-serif;
     color: #e0e0e0;
     margin: 0;
@@ -117,7 +117,7 @@ body {
     height: 100%;
     opacity: 0.8;
     background-position: center;
-    animation: glitch 0.5s linear 1;
+    animation: glitch 0.2s linear infinite;
     animation-delay: calc(var(--random-delay) * 1s); 
   }
   
